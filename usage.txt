@@ -1,0 +1,6 @@
+gem uninstall pkg/OState-0.0.1.gem; rm pkg/OState-0.0.1.gem; rake build; gem install pkg/OState-0.0.1.gem
+
+> require 'OState'
+> OState::Configuration.api_key = "7dc1ba922a424d88af580364c7b8bd05"
+
+
