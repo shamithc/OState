@@ -10,32 +10,21 @@ module OState
 
     def get(path, query_params = {})
       response = _do_get path
-      puts response.code
-      puts "-------------------------"
       if response.code.to_i == 200
         JSON.parse(response.body)
       else
-         # raise AuthenticationError
-        # raise AuthenticationError
-        # Exception.
         raise_exception(response.code)
       end
-      # elsif response.code.to_i == 401
-      #   raise AuthenticationError, ""
-      # else
-      #   zfff
-      # end
     end
-
-
-
 
     def raise_exception status_code
       case status_code.to_i
       when 401
         raise AuthenticationError
-      else
-
+      when 404
+        raise NotFoundError
+      when 400
+        raise BadRequestError,"request too large, try narrowing your search by adding more filters"
       end
     end
 

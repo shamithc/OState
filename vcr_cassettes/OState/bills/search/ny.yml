@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://openstates.org/api/v1/bills/?per_page=5&state=ny
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      X-Apikey:
+      - 7dc1ba922a424d88af580364c7b8bd05
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.1 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Authorization
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '1614'
+      Date:
+      - Sun, 31 Jul 2016 17:38:41 GMT
+      X-Varnish:
+      - '142444333'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"title": "Allows public utility lines and bicycle paths on certain
+        state lands in the forest preserve and establishing a forest preserve health
+        and safety land account", "created_at": "2016-06-18 07:37:17", "updated_at":
+        "2016-07-30 07:35:05", "id": "NYB00091952", "chamber": "lower", "state": "ny",
+        "session": "2015-2016", "type": ["bill"], "subjects": [], "bill_id": "A 10721A"},
+        {"title": "Relates to the use of fulfillment services of certain persons",
+        "created_at": "2016-07-30 07:35:29", "updated_at": "2016-07-30 07:35:29",
+        "id": "NYB00091987", "chamber": "upper", "state": "ny", "session": "2015-2016",
+        "type": ["bill"], "subjects": [], "bill_id": "S 8170"}, {"title": "Provides
+        for the reduction or revocation of the public pension of a public officer",
+        "created_at": "2016-06-18 07:36:54", "updated_at": "2016-07-30 07:34:48",
+        "id": "NYB00091950", "chamber": "lower", "state": "ny", "session": "2015-2016",
+        "type": ["bill"], "subjects": [], "bill_id": "A 10739A"}, {"title": "Provides
+        for recall of elected officials", "created_at": "2016-06-10 07:31:08", "updated_at":
+        "2016-07-28 07:30:41", "id": "NYB00091233", "chamber": "upper", "state": "ny",
+        "session": "2015-2016", "type": ["bill"], "subjects": [], "bill_id": "S 8069"},
+        {"title": "Authorizes public utility line and bike paths located within the
+        forest preserve, and establishes land banks within such preserve for public
+        projects", "created_at": "2016-06-18 07:35:27", "updated_at": "2016-07-28
+        07:29:11", "id": "NYB00091941", "chamber": "upper", "state": "ny", "session":
+        "2015-2016", "type": ["bill"], "subjects": [], "bill_id": "S 8026A"}]'
+    http_version: 
+  recorded_at: Sun, 31 Jul 2016 17:35:08 GMT
+recorded_with: VCR 3.0.3

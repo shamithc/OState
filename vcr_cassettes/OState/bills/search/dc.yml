@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://openstates.org/api/v1/bills/?per_page=5&state=dc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      X-Apikey:
+      - 7dc1ba922a424d88af580364c7b8bd05
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.1 (Ubuntu)
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Authorization
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '1365'
+      Date:
+      - Sun, 31 Jul 2016 17:38:40 GMT
+      X-Varnish:
+      - '142444329'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sidGl0bGUiOiAiXCJBTEJFUlQg4oCcQlVUQ0jigJ0gSE9QS0lOUyBXQVkg
+        QUNUIE9GIDIwMTJcIi4iLCAiY3JlYXRlZF9hdCI6ICIyMDEyLTA1LTE4IDAy
+        OjMzOjIzIiwgInVwZGF0ZWRfYXQiOiAiMjAxMy0wMS0wMyAxODo0MDo1NSIs
+        ICJpZCI6ICJEQ0IwMDAwMjAyOSIsICJjaGFtYmVyIjogInVwcGVyIiwgInN0
+        YXRlIjogImRjIiwgInNlc3Npb24iOiAiMTkiLCAidHlwZSI6IFsiYmlsbCJd
+        LCAic3ViamVjdHMiOiBbXSwgImJpbGxfaWQiOiAiQiAxOS0wNzgwIn0sIHsi
+        dGl0bGUiOiAiXCJMR0JUUSBIT01FTEVTUyBZT1VUSCBSRUZPUk0gQUNUIE9G
+        IDIwMTNcIi4iLCAiY3JlYXRlZF9hdCI6ICIyMDEzLTAxLTExIDAwOjE1OjM1
+        IiwgInVwZGF0ZWRfYXQiOiAiMjAxNC0wMy0xMSAwMDowNjoyNSIsICJpZCI6
+        ICJEQ0IwMDAwMzI0MCIsICJjaGFtYmVyIjogInVwcGVyIiwgInN0YXRlIjog
+        ImRjIiwgInNlc3Npb24iOiAiMjAiLCAidHlwZSI6IFsiYmlsbCJdLCAic3Vi
+        amVjdHMiOiBbXSwgImJpbGxfaWQiOiAiQiAyMC0wMDUxIn0sIHsidGl0bGUi
+        OiAiTGF3IEVuZm9yY2VtZW50IENhcmVlciBPcHBvcnR1bml0eSBBbWVuZG1l
+        bnQgQWN0IG9mIDIwMTYiLCAiY3JlYXRlZF9hdCI6ICIyMDE2LTA3LTE2IDA0
+        OjU2OjMxIiwgInVwZGF0ZWRfYXQiOiAiMjAxNi0wNy0yNyAwNDo1NjoyMyIs
+        ICJpZCI6ICJEQ0IwMDAwODA2NyIsICJjaGFtYmVyIjogInVwcGVyIiwgInN0
+        YXRlIjogImRjIiwgInNlc3Npb24iOiAiMjEiLCAidHlwZSI6IFsiYmlsbCJd
+        LCAic3ViamVjdHMiOiBbXSwgImJpbGxfaWQiOiAiQiAyMS0wODQ3In0sIHsi
+        dGl0bGUiOiAiR2FzIFN0YXRpb24gQWR2aXNvcnkgQm9hcmQgVGVtcG9yYXJ5
+        IEFtZW5kbWVudCBBY3Qgb2YgMjAxNiIsICJjcmVhdGVkX2F0IjogIjIwMTYt
+        MDYtMjkgMDQ6NTQ6NDQiLCAidXBkYXRlZF9hdCI6ICIyMDE2LTA3LTI5IDA0
+        OjU3OjU1IiwgImlkIjogIkRDQjAwMDA3OTYyIiwgImNoYW1iZXIiOiAidXBw
+        ZXIiLCAic3RhdGUiOiAiZGMiLCAic2Vzc2lvbiI6ICIyMSIsICJ0eXBlIjog
+        WyJiaWxsIl0sICJzdWJqZWN0cyI6IFtdLCAiYmlsbF9pZCI6ICJCIDIxLTA4
+        MDkifSwgeyJ0aXRsZSI6ICJSZW5ld2FibGUgUG9ydGZvbGlvIFN0YW5kYXJk
+        IEV4cGFuc2lvbiBBbWVuZG1lbnQgQWN0IG9mIDIwMTYiLCAiY3JlYXRlZF9h
+        dCI6ICIyMDE2LTAzLTAyIDA3OjQyOjQ4IiwgInVwZGF0ZWRfYXQiOiAiMjAx
+        Ni0wNy0zMSAwNDo1NjoyNSIsICJpZCI6ICJEQ0IwMDAwNzIxNiIsICJjaGFt
+        YmVyIjogInVwcGVyIiwgInN0YXRlIjogImRjIiwgInNlc3Npb24iOiAiMjEi
+        LCAidHlwZSI6IFsiYmlsbCJdLCAic3ViamVjdHMiOiBbXSwgImJpbGxfaWQi
+        OiAiQiAyMS0wNjUwIn1d
+    http_version: 
+  recorded_at: Sun, 31 Jul 2016 17:35:07 GMT
+recorded_with: VCR 3.0.3

@@ -10,6 +10,10 @@ module OState
     	StateMetadata::Base.new(self)
     end
 
+    def bill
+      Bill::Base.new(self)
+    end
+
     def http
       Http.new(self)
     end

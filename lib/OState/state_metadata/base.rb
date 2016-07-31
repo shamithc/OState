@@ -8,10 +8,10 @@ module OState
 
       def all
         resonse = @base_class.http.get("/api/v1/metadata/")
-        ResourceCollection.new(resonse)
+        ResourceCollection.new(resonse, StateMetadata)
       end
 
-      def find(meta_data)
+      def find meta_data
         resonse = @base_class.http.get("/api/v1/metadata/#{meta_data}/")
         StateMetadata.new(resonse)
       end

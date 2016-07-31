@@ -9,6 +9,10 @@ require "OState/state_metadata"
 require "OState/resource_collection"
 require "OState/configuration"
 require 'OState/http'
-
 require 'OState/state_metadata/base'
+
+require "OState/bill"
+require 'OState/bill/base'
+
+
 
