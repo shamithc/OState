@@ -14,5 +14,8 @@ require 'OState/state_metadata/base'
 require "OState/bill"
 require 'OState/bill/base'
 
+require "OState/legislator"
+require 'OState/legislator/base'
+
 
 

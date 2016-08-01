@@ -14,6 +14,10 @@ module OState
       Bill::Base.new(self)
     end
 
+    def legislator
+      Legislator::Base.new(self)
+    end
+
     def http
       Http.new(self)
     end

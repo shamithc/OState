@@ -46,7 +46,29 @@ describe OState::Bill do
       expect(dc_bills).to_not equal(ny_bills)
     end
 
-    it "sort should be vary with sort options"
+    it "sort should vary with sort options" do
+      sort_by_first = VCR.use_cassette('OState/bills/sort/first') do
+        OState::Bill.search(state: "dc", per_page: 5, sort: 'first')
+      end
+
+      sort_by_created_at = VCR.use_cassette('OState/bills/sort/created_at') do
+        OState::Bill.search(state: "dc", per_page: 5, sort: 'created_at')
+      end
+
+      expect(sort_by_first).to_not equal(sort_by_created_at)
+    end
+
+    it "response should vary with pagination by per page" do
+      paginate_by_5_per_page = VCR.use_cassette('OState/bills/paginate/paginate_by_5_per_page') do
+        OState::Bill.search(state: "dc", per_page: 5)
+      end
+
+      paginate_by_10_per_page = VCR.use_cassette('OState/bills/paginate/paginate_by_10_per_page') do
+        OState::Bill.search(state: "dc", per_page: 10)
+      end
+
+      expect(paginate_by_5_per_page.collection.count).to_not equal(paginate_by_10_per_page.collection.count)
+    end
   end
 
 end

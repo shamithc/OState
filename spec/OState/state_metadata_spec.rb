@@ -18,11 +18,26 @@ describe OState::StateMetadata do
 
 
     it "return valid response if id is valid" do
-      OState::Configuration.api_key = "7dc1ba922a424d88af580364c7b8bd05"
       expect do
         OState::StateMetadata.find('ma')
       end.to_not raise_error
     end
   end
 
+  describe "self.all" do
+    it "return valid response" do
+      VCR.use_cassette('OState/state_metadata/all') do
+        expect do
+          OState::StateMetadata.all
+        end.to_not raise_error
+      end
+    end
+
+    it "response should be instance of ResourceCollection" do
+      all_metadata = VCR.use_cassette('OState/state_metadata/all') do
+        OState::StateMetadata.all
+      end
+      expect(all_metadata).to be_a OState::ResourceCollection
+    end
+  end
 end
