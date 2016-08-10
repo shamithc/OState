@@ -18,6 +18,18 @@ module OState
       Legislator::Base.new(self)
     end
 
+    def committee
+      Committee::Base.new(self)
+    end
+
+    def event
+      Event::Base.new(self)
+    end
+
+    def district
+       District::Base.new(self)
+    end
+
     def http
       Http.new(self)
     end

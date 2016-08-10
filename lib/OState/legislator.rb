@@ -14,6 +14,10 @@ module OState
       Configuration.base_class.legislator.search(options)
     end
 
+    def self.geo_lookup options = {}
+      Configuration.base_class.legislator.geo_lookup(options)
+    end
+
     def initialize(args)
       args.each do |key, value|
         key = key.gsub(/[^0-9A-Za-z\s_]/, '')

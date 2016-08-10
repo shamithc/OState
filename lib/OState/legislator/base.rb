@@ -8,14 +8,19 @@ module OState
 
       def find leg_id
         resonse = @base_class.http.get("/api/v1/legislators/#{leg_id}/")
-        p resonse
         Legislator.new(resonse)
       end
 
       def search options
-        path = "/api/v1/bills/?" + build_query_string(options)
+        path = "/api/v1/legislators/?" + build_query_string(options)
         resonse = @base_class.http.get(path)
-        ResourceCollection.new(resonse, Bill)
+        ResourceCollection.new(resonse, Legislator)
+      end
+
+      def geo_lookup options
+        path = "/api/v1/legislators/geo/?" + build_query_string(options)
+        resonse = @base_class.http.get(path)
+        ResourceCollection.new(resonse, Legislator)
       end
 
       private

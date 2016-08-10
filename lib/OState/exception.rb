@@ -3,5 +3,5 @@ module OState
   class AuthenticationError < OStateError; end
   class NotFoundError < OStateError; end
   class BadRequestError < OStateError; end
-  
+  class InternalServerError < OStateError; end
 end

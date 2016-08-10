@@ -17,5 +17,13 @@ require 'OState/bill/base'
 require "OState/legislator"
 require 'OState/legislator/base'
 
+require "OState/committee"
+require 'OState/committee/base'
+
+require "OState/event"
+require 'OState/event/base'
+
+require "OState/district"
+require 'OState/district/base'
 
 

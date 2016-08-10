@@ -1,11 +1,9 @@
 module OState
   class Http
-    # include Exception
 
     def initialize(base_class)
       @base_class = base_class
       @api_key = @base_class.config.api_key
-      # @api_key = "7dc1ba922a424d88af580364c7b8bd05"
     end
 
     def get(path, query_params = {})
@@ -24,7 +22,9 @@ module OState
       when 404
         raise NotFoundError
       when 400
-        raise BadRequestError,"request too large, try narrowing your search by adding more filters"
+        raise BadRequestError,"Bad Request - request too large or missing parameter. see doc: http://sunlightlabs.github.io/openstates-api/index.html"
+      when 500
+        raise InternalServerError
       end
     end
 
@@ -36,8 +36,7 @@ module OState
         request =  Net::HTTP::Get.new(path)
         request["Accept"] = "application/json"
         request["X-APIKEY"] = @api_key
-        response = http.request(request)
-        response
+        http.request(request)
       end
     end
   end
